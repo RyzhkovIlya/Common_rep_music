@@ -1,15 +1,13 @@
 import lyricsgenius as lg
-from api.loader import API_TOKEN
-def name_checker(name):
+# from api.loader import API_TOKEN
+def name_checker(name, API_TOKEN):
     try:
-        genius = lg.Genius(API_TOKEN,skip_non_songs=True, remove_section_headers=True)
+        genius = lg.Genius(API_TOKEN, skip_non_songs=True, remove_section_headers=True)
         response = (genius.search_artist(name, max_songs=1, sort='popularity'))
         true_name = response.name
         return true_name
     except:
         return name
-
-print(name_checker(''))
 # import lyricsgenius as lg
 # from joblib import Parallel, delayed
 #

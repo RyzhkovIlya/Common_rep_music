@@ -33,13 +33,13 @@ def clean_lemm_general(text_general):
 
 def read_text(API_TOKEN):
 
-    for i in tqdm(os.listdir('C:/Users/ryzhk/OneDrive/Документы/GitHub/ds_bootcamp/Bot_PolundraHack/Bot_PolundraHack/flast_test/flask_test/api/core/data')):
-        os.rename(f'C:/Users/ryzhk/OneDrive/Документы/GitHub/ds_bootcamp/Bot_PolundraHack/Bot_PolundraHack/flast_test/flask_test/api/core/data/{i}', f'C:/Users/ryzhk/OneDrive/Документы/GitHub/ds_bootcamp/Bot_PolundraHack/Bot_PolundraHack/flast_test/flask_test/api/core/data/{name_checker(i[:-4], API_TOKEN)}.txt')
+    for i in tqdm(os.listdir('api/core/data')):
+        os.rename(f'api/core/data/{i}', f'api/core/data/{name_checker(i[:-4], API_TOKEN)}.txt')
 
     text_dict = {}
-    for i in os.listdir('C:/Users/ryzhk/OneDrive/Документы/GitHub/ds_bootcamp/Bot_PolundraHack/Bot_PolundraHack/flast_test/flask_test/api/core/data'):
+    for i in os.listdir('api/core/data'):
         try:
-            with open(f'C:/Users/ryzhk/OneDrive/Документы/GitHub/ds_bootcamp/Bot_PolundraHack/Bot_PolundraHack/flast_test/flask_test/api/core/data/{i}', encoding='utf-8', newline='') as f:
+            with open(f'api/core/data/{i}', encoding='utf-8', newline='') as f:
                 artist_text = f.read()
                 text_dict[i[:-4]] = clean_lemm_general(artist_text)
         except:
