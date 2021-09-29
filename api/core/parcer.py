@@ -59,3 +59,4 @@ def get_lyrics(name, k):
         print(f"some exception at {name}: {c}")
 
 songs = Parallel(n_jobs=20, verbose=1)(delayed(get_lyrics)(i, 10) for i in names)
+

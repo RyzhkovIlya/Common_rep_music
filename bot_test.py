@@ -28,7 +28,7 @@ API_TOKEN = os.getenv('TOKEN_GENIUS')
 # if __name__ == '__main__':
 #     app.run(debug=True, host='0.0.0.0', port=8080) #debug-перезапуск сервера автоматически
 
-logging.basicConfig(filename='log.log1',
+logging.basicConfig(filename='log1.log',
                     # encoding='utf-8',
                     level=logging.INFO)
 
