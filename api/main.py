@@ -9,10 +9,9 @@ import pandas as pd
 for i in os.listdir('../api/database/raw_data'):
     os.rename(f'../api/database/raw_data/{i}', f'../api/database/raw_data/{name_checker(i[:-4], API_TOKEN)}.txt')
 
-try:
-    pd.read_csv('../api/database/TF_IDF.csv')
-    print('Done')
-except:
+tfidf_not_exists = 'TF_IDF.csv' not in os.listdir('../api/database')
+print(tfidf_not_exists)
+if tfidf_not_exists:
     dictionary_words = {}
     for i in os.listdir('../api/database/raw_data'):
         try:
@@ -23,11 +22,14 @@ except:
             print(i)
     pickle.dump(dictionary_words, open("../api/database/dictionary_words.pickle", "wb"))
     artists_similarity = tfidf(pickle.load(open("../api/database/dictionary_words.pickle", 'rb')))
-    pd.DataFrame(artists_similarity, columns=dictionary_words.keys(), index=dictionary_words.keys()).to_csv('../api/database/TF_IDF.csv', )
+    pd.DataFrame(artists_similarity, index=dictionary_words.keys()).to_csv('../api/database/TF_IDF.csv')
 
 name = 'Muse'
 name = input_checker(name)
 name = name_checker(name, API_TOKEN)
-if name in pd.read_csv('../api/database/artist_names.csv'):
-    df = pd.read_csv('../api/database/artist_names.csv')
-    print(',\n'.join([df[name].sort_values(ascending=False).index[1:6]]))
+
+df = pd.read_csv('../api/database/artist_names.csv')
+if name in df['authors'].to_list():
+    df_TF_IDF = pd.read_csv('../api/database/TF_IDF.csv', index_col=0)
+    print('\n'.join(*[df_TF_IDF['Muse'].sort_values(ascending=False).head(6)[1:].index.to_list()]))
+
