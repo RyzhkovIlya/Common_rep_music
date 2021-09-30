@@ -1,9 +1,7 @@
 import os
 from dotenv import load_dotenv
-# from joblib import Parallel, delayed
+from api.loader import API_TOKEN
 
-load_dotenv()
-API_TOKEN = os.getenv('TOKEN_GENIUS')
 
 def get_lyrics(name, k):
     c = 0
