@@ -5,7 +5,6 @@ from api.core.parcer import pars
 from api.core.update_dictionary_words import dict_words, dict_all_words
 from api.checkers.name_checker import name_checker
 from api.checkers.input_checker import input_checker
-from api.loader import API_TOKEN
 import pickle
 from api.core.tf_idf import tfidf
 import pandas as pd 
@@ -21,9 +20,9 @@ def recommender(name: str):
     """
     pass
     """
-
+    
     name = input_checker(name)
-    name = name_checker(name, API_TOKEN)
+    name = name_checker(name)
 
     df = pd.read_csv('api/database/artist_names.csv', sep='\t')
 

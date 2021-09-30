@@ -1,7 +1,7 @@
 import lyricsgenius as lg
-# from api.loader import API_TOKEN
+from api.loader import API_TOKEN
 
-def name_checker(name_artist, API_TOKEN):
+def name_checker(name_artist, API_TOKEN=API_TOKEN):
     try:
         genius = lg.Genius(API_TOKEN, skip_non_songs=True, remove_section_headers=True)
         response = genius.search_artist(name_artist, max_songs=0, sort='popularity')
