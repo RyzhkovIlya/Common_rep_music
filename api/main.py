@@ -1,6 +1,6 @@
 import os
 from api.core.update_artist_names import upd_artist_name
-from api.core.recomendation import reccomendation
+from api.core.recommendation import recommendation
 from api.core.parcer import pars
 from api.core.update_dictionary_words import dict_words, dict_all_words
 from api.checkers.name_checker import name_checker
@@ -26,8 +26,8 @@ def recommender(name: str):
     name = name_checker(name, API_TOKEN)
     df = pd.read_csv('database/artist_names.csv', sep='\t')
     if name in df['authors'].to_list():
-        reccommend = reccomendation(name)
-        return reccommend
+        recommend = recommendation(name)
+        return recommend
     if name not in df['authors'].to_list():
         # print('Not')
         pars(name)
@@ -37,5 +37,5 @@ def recommender(name: str):
         pickle.dump(dictionary_words, open("database/dictionary_words.pickle", "wb"))
         artists_similarity = tfidf(pickle.load(open("database/dictionary_words.pickle", 'rb')))
         pd.DataFrame(artists_similarity, index=dictionary_words.keys()).to_csv('database/TF_IDF.csv')
-        reccomend = reccomendation(name)
-        return reccomend
+        recommend = recommendation(name)
+        return recommend

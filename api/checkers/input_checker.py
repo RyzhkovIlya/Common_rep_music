@@ -1,4 +1,4 @@
-from static.text import ERROR_TEXT
+from webapp.static.text import ERROR_TEXT
 def input_checker(name):
     try:
         isinstance(name, (int, str))
