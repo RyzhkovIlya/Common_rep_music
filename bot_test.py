@@ -10,7 +10,7 @@ import time
 from static.text import START, INFO
 from model_test import similar_artist
 import nltk
-from musicmatcher import read_text, tfidf
+from api.musicmatcher import read_text, tfidf
 nltk.download('stopwords')
 load_dotenv()
 API_TOKEN = os.getenv('TOKEN_GENIUS')

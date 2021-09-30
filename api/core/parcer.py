@@ -42,7 +42,7 @@ names = ['Gorillaz',
 #
 #     return res
 def get_lyrics(name, k):
-    c =0
+    c = 0
     import lyricsgenius as lg
     try:
         genius = lg.Genius(API_TOKEN,skip_non_songs=True, excluded_terms=["(Remix)", "(Live)"], remove_section_headers=True)
@@ -51,12 +51,14 @@ def get_lyrics(name, k):
         s = [song.lyrics for song in songs]
         name = response.name
 
-        with open(f"api/data/{name}.txt", "w") as f:
+        with open(f"../api/database/raw_data/{name}.txt", "w") as f:
             f.write('\n \n'.join(s))
         c += 1
         print(f"Songs grabbed:{len(s)}")
     except:
         print(f"some exception at {name}: {c}")
 
-songs = Parallel(n_jobs=20, verbose=1)(delayed(get_lyrics)(i, 10) for i in names)
+# songs = Parallel(n_jobs=10, verbose=1)(delayed(get_lyrics)(i, 10) for i in names)
 
+def pars(name):
+    return get_lyrics(name, 20)

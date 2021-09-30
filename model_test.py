@@ -1,7 +1,7 @@
 import os
 import nltk
 from dotenv import load_dotenv
-from musicmatcher import final_df
+from api.musicmatcher import final_df
 nltk.download('stopwords')
 load_dotenv()
 API_TOKEN = os.getenv('TOKEN_GENIUS')
