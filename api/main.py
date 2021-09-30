@@ -1,6 +1,6 @@
 import os
 from api.core.update_artist_names import upd_artist_name
-from api.core.recommendation import recommendation
+from api.core.recomendation import reccomendation
 from api.core.parcer import pars
 from api.core.update_dictionary_words import dict_words, dict_all_words
 from api.checkers.name_checker import name_checker
@@ -28,24 +28,15 @@ def recommender(name: str):
     df = pd.read_csv('api/database/artist_names.csv', sep='\t')
 
     if name in df['authors'].to_list():
-        recommend = recommendation(name)
-        return recommend
+        reccommend = reccomendation(name)
+        return reccommend
     if name not in df['authors'].to_list():
         # print('Not')
         pars(name)
         upd_artist_name(name)
         dictionary_words = dict_words(name)
-<<<<<<< HEAD
         pickle.dump(dictionary_words, open("api/database/dictionary_words.pickle", "wb"))
         artists_similarity = tfidf(pickle.load(open("api/database/dictionary_words.pickle", 'rb')))
         pd.DataFrame(artists_similarity, index=dictionary_words.keys()).to_csv('api/database/TF_IDF.csv')
         reccomend = reccomendation(name)
         return reccomend
-=======
-        print(dictionary_words)
-        pickle.dump(dictionary_words, open("database/dictionary_words.pickle", "wb"))
-        artists_similarity = tfidf(pickle.load(open("database/dictionary_words.pickle", 'rb')))
-        pd.DataFrame(artists_similarity, index=dictionary_words.keys()).to_csv('database/TF_IDF.csv')
-        recommend = recommendation(name)
-        return recommend
->>>>>>> 65518692ba2e6f3f635b81c7325de2703e8f2774
