@@ -13,6 +13,7 @@ def dict_all_words():
             print(i)
     return dictionary_words
 
+
 def dict_words(name: str):
     if name + '.txt' in os.listdir('api/database/raw_data'):
         print(name)
