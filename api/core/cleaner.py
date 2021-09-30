@@ -2,9 +2,13 @@ import nltk
 import re
 from nltk.stem import WordNetLemmatizer
 
+nltk.data.path.append('nltk_data')
+
 def clean_lemm_general(text_general):
 
-    nltk.download('wordnet')
+    nltk.download('wordnet', 'nltk_data')
+    nltk.data.path.append('nltk_data')
+    
     def clean(text):
 
         text_clean_pre = text.lower()  # приводим все символы к нижнему регистру

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} {% endblock %}</h1>
+
+<div class="container">
+<<<<<<< HEAD
+    Привет! Мы поможем тебе найти исполнителей, 
+    чьи тексты песен максимально похожи на текста твоего любимого исполнителя.
+=======
+    Привет, мы поможем тебе найти имполнителей, чьи текста максимально похожи на текста твоего любимого исполнителя.
+>>>>>>> 45ad41aa7c3007819de10edbb285656ba3530567
+</div>
+<div>
+    <form action='/result' method="POST">
+        <div class="container">
+            <label> Put your artist on: </label>
+            <input type="text" placeholder="{{not_mos}}Maroon 5" name="artist" required>
+            <button type="submit">Find Top-5</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
