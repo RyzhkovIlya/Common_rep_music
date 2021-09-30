@@ -46,13 +46,13 @@ def read_text(API_TOKEN):
             print(i)
     return text_dict
 
-def tfidf (diction: dict) -> dict:
-
-    tfidf = TfidfVectorizer(ngram_range=(1, 4))
-    tfidf_representation = tfidf.fit_transform(diction.values())
-    artists_similarity = 1 - pairwise_distances(tfidf_representation, metric="cosine")
-    dict_of_artist_similarity = dict(zip(diction.keys(), artists_similarity))
-    return dict_of_artist_similarity
+# def tfidf (diction: dict) -> dict:
+#
+#     tfidf = TfidfVectorizer(ngram_range=(1, 4))
+#     tfidf_representation = tfidf.fit_transform(diction.values())
+#     artists_similarity = 1 - pairwise_distances(tfidf_representation, metric="cosine")
+#     dict_of_artist_similarity = dict(zip(diction.keys(), artists_similarity))
+#     return dict_of_artist_similarity
 
 def final_df(artist_name: str, dict_artist_similary: dict, text_dict: dict) -> [str, dict, dict]:
 

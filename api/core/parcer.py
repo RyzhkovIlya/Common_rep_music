@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-from joblib import Parallel, delayed
+# from joblib import Parallel, delayed
 
 load_dotenv()
 API_TOKEN = os.getenv('TOKEN_GENIUS')
@@ -49,9 +49,9 @@ def get_lyrics(name, k):
         response = genius.search_artist(name, max_songs=k, sort='popularity')
         songs = response.songs
         s = [song.lyrics for song in songs]
-        name = response.name
+        name_1 = response.name
 
-        with open(f"../api/database/raw_data/{name}.txt", "w") as f:
+        with open(f"../api/database/raw_data/{name_1}.txt", "w") as f:
             f.write('\n \n'.join(s))
         c += 1
         print(f"Songs grabbed:{len(s)}")

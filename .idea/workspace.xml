@@ -20,20 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66479266-d503-4a74-be38-6967dc8fe44e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/trryyy.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/checkers/name_checker.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/checkers/name_checker.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/core/parcer.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/core/parcer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/core/recomendation.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/core/recomendation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/core/update_artist_names.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/core/update_artist_names.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/core/tf_idf.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/core/tf_idf.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/core/update_dictionary_words.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/core/update_dictionary_words.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/database/TF_IDF.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/database/TF_IDF.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api/database/TF_IDF.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/database/artist_names.csv" beforeDir="false" afterPath="$PROJECT_DIR$/api/database/artist_names.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/database/dictionary_words.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/api/database/dictionary_words.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/api/database/dictionary_words.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/database/raw_data/Филипп Киркоров (Philipp Kirkorov).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/database/raw_data/Шура Кузнецова (Shura Kuznetsova).txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/api/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/musicmatcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/musicmatcher.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/musicmatcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/musicmatcher.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +44,17 @@
       <list>
         <option value="Python Script" />
       </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
     </option>
   </component>
   <component name="Git.Settings">
@@ -119,6 +129,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="trryyy" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Common_rep_music" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/trryyy.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="update_artist_names" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Common_rep_music" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -141,9 +173,33 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="update_dictionary_words" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Common_rep_music" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/api/core" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/api/core/update_dictionary_words.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.update_dictionary_words" />
+        <item itemvalue="Python.trryyy" />
         <item itemvalue="Python.temp" />
         <item itemvalue="Python.update_artist_names" />
       </list>
@@ -167,7 +223,7 @@
       <workItem from="1632938094770" duration="216000" />
       <workItem from="1632938399004" duration="27000" />
       <workItem from="1632945351697" duration="4162000" />
-      <workItem from="1632981792033" duration="3594000" />
+      <workItem from="1632981792033" duration="7354000" />
     </task>
     <servers />
   </component>
@@ -199,38 +255,38 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1632908366959" />
-    <state width="1323" height="201" key="GridCell.Tab.0.bottom" timestamp="1632985276229">
+    <state width="1323" height="201" key="GridCell.Tab.0.bottom" timestamp="1632989182196">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="201" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1632985276229" />
-    <state width="1323" height="201" key="GridCell.Tab.0.center" timestamp="1632985276229">
+    <state width="1323" height="201" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1632989182196" />
+    <state width="1323" height="201" key="GridCell.Tab.0.center" timestamp="1632989182196">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="201" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1632985276229" />
-    <state width="1323" height="201" key="GridCell.Tab.0.left" timestamp="1632985276229">
+    <state width="1323" height="201" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1632989182196" />
+    <state width="1323" height="201" key="GridCell.Tab.0.left" timestamp="1632989182196">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="201" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1632985276229" />
-    <state width="1323" height="201" key="GridCell.Tab.0.right" timestamp="1632985276229">
+    <state width="1323" height="201" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1632989182196" />
+    <state width="1323" height="201" key="GridCell.Tab.0.right" timestamp="1632989182196">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="201" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1632985276229" />
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1632926545914">
+    <state width="1323" height="201" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1632989182196" />
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1632988259159">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1632926545914" />
-    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1632926545914">
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1632988259159" />
+    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1632988259159">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1632926545914" />
-    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1632926545914">
+    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1632988259159" />
+    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1632988259159">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1632926545914" />
-    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1632926545914">
+    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1632988259159" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1632988259159">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1632926545914" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1632988259159" />
     <state x="263" y="19" key="editAsTableFormatDialogDimension" timestamp="1632948877204">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -238,7 +294,9 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Common_rep_music$temp.coverage" NAME="temp Coverage Results" MODIFIED="1632984632921" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
+    <SUITE FILE_PATH="coverage/Common_rep_music$update_dictionary_words.coverage" NAME="update_dictionary_words Coverage Results" MODIFIED="1632988176872" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/core" />
     <SUITE FILE_PATH="coverage/Common_rep_music$update_artist_names.coverage" NAME="update_artist_names Coverage Results" MODIFIED="1632949663060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api/core" />
-    <SUITE FILE_PATH="coverage/Common_rep_music$main.coverage" NAME="main Coverage Results" MODIFIED="1632985276210" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
+    <SUITE FILE_PATH="coverage/Common_rep_music$main.coverage" NAME="main Coverage Results" MODIFIED="1632989182177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api" />
+    <SUITE FILE_PATH="coverage/Common_rep_music$trryyy.coverage" NAME="trryyy Coverage Results" MODIFIED="1632986022429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
