@@ -1,11 +1,14 @@
+import os
+import re
+
 import nltk
 from nltk.stem import WordNetLemmatizer
 from tqdm import tqdm
-import os
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import pairwise_distances
 import pandas as pd
-import re
+
+from api.checkers.name_checker import name_checker
 
 def rec_music():
     return 'Меладзе'
@@ -54,7 +57,7 @@ def read_text(API_TOKEN):
 #     dict_of_artist_similarity = dict(zip(diction.keys(), artists_similarity))
 #     return dict_of_artist_similarity
 
-def final_df(artist_name: str, dict_artist_similary: dict, text_dict: dict) -> [str, dict, dict]:
+def final_df(artist_name: str, dict_artist_similary: dict, text_dict: dict) -> list[str, dict, dict]:
 
     df = pd.DataFrame(dict_artist_similary, index=text_dict.keys())
     return (',\n'.join([df[artist_name].sort_values(ascending=False).index[1:6]]))
